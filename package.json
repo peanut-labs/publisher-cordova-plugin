@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-peanutlabs",
-  "version": "2.2.0",
+  "version": "0.0.7",
   "description": "Cordova plugin for Peanutlabs rewards center",
   "cordova": {
     "id": "cordova-plugin-peanutlabs",
