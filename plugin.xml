@@ -17,8 +17,8 @@
 	    <engine name="cordova" version=">=3.0" />
 	</engines>
 
-  <js-module src="www/PLPluginManager.js" name="PLPluginManager">
-      <clobbers target="window.plugins.PLPluginManager" />
+  <js-module src="www/peanutplugin.js" name="peanutplugin">
+      <clobbers target="peanutplugin" />
   </js-module>
 
     <!-- android -->
