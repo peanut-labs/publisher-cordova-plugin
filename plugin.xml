@@ -3,7 +3,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	id="cordova-plugin-peanutlabs"
-	version="0.0.3">
+	version="0.0.4">
       
   <name>Peanutlabs</name>
 	<description>Cordova plugin for Peanutlabs rewards Center</description>
@@ -24,8 +24,8 @@
     <!-- android -->
   <platform name="android">
       <config-file target="res/xml/config.xml" parent="/*">
-          <feature name="PLPluginManager">
-              <param name="android-package" value="com.peanutlabs.cordova.plugin.PLPluginManager"/>
+          <feature name="PeanutlabsPlugin">
+              <param name="android-package" value="com.peanutlabs.plugin.PLPluginManager"/>
           </feature>
       </config-file>
       <source-file src="src/android/PLPluginManager.java" target-dir="com/peanutlabs/cordova/plugin" />
