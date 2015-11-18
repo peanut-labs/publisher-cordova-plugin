@@ -14,13 +14,4 @@ PeanutlabsPlugin.prototype.openRewardsCenter = function(options, successCallback
 	return cordova.exec(successCallback, failureCallback, 'PLPluginManager', 'action', [options]);
 };
 
-PeanutlabsPlugin.install=function(){
-    if(!window.plugins){
-        window.plugins={};
-    }
-
-    window.plugins.sms= new SmsPlugin();
-    return window.plugins.sms;
-};
-
-cordova.addConstructor(PeanutlabsPlugin.install);
+module.exports = new PeanutlabsPlugin();
