@@ -9,7 +9,7 @@ var exec = require('cordova/exec');
 
 var PeanutlabsPlugin = {
 	openRewardsCenter: function(options, successCallback, failureCallback) {
-		cordova.exec(successCallback, failureCallback, 'PLPluginManager', 'action', [options]);
+		cordova.exec(successCallback, failureCallback, 'PeanutlabsPlugin', 'action', [options]);
 	}
 };
 
