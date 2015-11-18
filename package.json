@@ -1,0 +1,27 @@
+{
+  "name": "cordova-plugin-peanutlabs",
+  "version": "2.2.0",
+  "description": "Cordova plugin for Peanutlabs rewards center",
+  "cordova": {
+    "id": "cordova-plugin-peanutlabs",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/peanut-labs/publisher-cordova-plugin.git"
+  },
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "peanutlabs",
+    "ad",
+    "survey",
+    "peanut"
+  ],
+  "author": {
+    "name": "Bilguun Oyunchimeg"
+  },
+  "license": "MIT"
+}
