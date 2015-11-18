@@ -18,7 +18,7 @@ public class PLPluginManager extends CordovaPlugin {
 		Log.v(TAG,"Plugin initialized");
 	}
 	
-	@override
+	@Override
 	public boolean execute(String action, JSONArray jarray, CallbackContext callbackContext) throws JSONException {
 		Log.v(TAG, action);
 		
