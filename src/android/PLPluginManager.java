@@ -22,11 +22,12 @@ public class PLPluginManager extends CordovaPlugin {
 	public boolean execute(String action, JSONArray jarray, CallbackContext callbackContext) throws JSONException {
 		Log.v(TAG, action);
 		
-		cordova.getActivity.runOnUiThread(new Runnable() {
+		cordova.getActivity().runOnUiThread(new Runnable() {
+			@Override
 			public void run() {
 				PeanutLabsManager pm = PeanutLabsManager.getInstance();
 				pm.setUserId("bilguun_39-8235-64fce826c6");
-				pm.openRewardsCenter(this.cordova.getActivity());
+				pm.openRewardsCenter(cordova.getActivity());
 			}
 		});
 		
