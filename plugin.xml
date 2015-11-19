@@ -46,10 +46,10 @@
 			<resource-file src="res/drawable-xhdpi/ic_action_next_item.png" target="res/drawable-xhdpi/ic_action_next_item.png" />
 			<resource-file src="res/drawable-xhdpi/ic_action_previous_item.png" target="res/drawable-xhdpi/ic_action_previous_item.png" />
 			
-			<resource-file src="res/drawable-xxhpdi/ic_action_accept.png" target="res/drawable-xxhpdi/ic_action_accept.png" />
-			<resource-file src="res/drawable-xxhpdi/ic_action_cancel.png" target="res/drawable-xxhpdi/ic_action_cancel.png" />
-			<resource-file src="res/drawable-xxhpdi/ic_action_next_item.png" target="res/drawable-xxhpdi/ic_action_next_item.png" />
-			<resource-file src="res/drawable-xxhpdi/ic_action_previous_item.png" target="res/drawable-xxhpdi/ic_action_previous_item.png" />
+			<resource-file src="res/drawable-xxhdpi/ic_action_accept.png" target="res/drawable-xxhdpi/ic_action_accept.png" />
+			<resource-file src="res/drawable-xxhdpi/ic_action_cancel.png" target="res/drawable-xxhdpi/ic_action_cancel.png" />
+			<resource-file src="res/drawable-xxhdpi/ic_action_next_item.png" target="res/drawable-xxhdpi/ic_action_next_item.png" />
+			<resource-file src="res/drawable-xxhdpi/ic_action_previous_item.png" target="res/drawable-xxhdpi/ic_action_previous_item.png" />
 			
 			<resource-file src="res/layout/activity_rewards_center.xml" target="res/layout/activity_rewards_center.xml" />
 			
