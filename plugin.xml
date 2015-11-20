@@ -36,7 +36,11 @@
 			</config-file>
 					
       <source-file src="src/android/PLPluginManager.java" target-dir="src/com/peanutlabs/plugin" />
-			<source-file src="src/android/plsdk.jar" target-dir="libs/" />
+			<source-file src="src/android/IRewardsCenterEventsHandler.java" target-dir="src/com/peanutlabs/plugin" />
+			<source-file src="src/android/IToolbarEventsHandler.java" target-dir="src/com/peanutlabs/plugin" />
+			<source-file src="src/android/PeanutLabsManager.java" target-dir="src/com/peanutlabs/plugin" />
+			<source-file src="src/android/RewardsCenterActivity.java" target-dir="src/com/peanutlabs/plugin" />
+			<!-- <source-file src="src/android/plsdk.jar" target-dir="libs/" /> -->
 			
 			<resource-file src="res/drawable-hdpi/ic_action_accept.png" target="res/drawable-hdpi/ic_action_accept.png" />
 			<resource-file src="res/drawable-hdpi/ic_action_cancel.png" target="res/drawable-hdpi/ic_action_cancel.png" />
