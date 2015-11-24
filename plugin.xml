@@ -3,15 +3,13 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	id="cordova-plugin-peanutlabs"
-	version="0.0.7">
+	version="0.0.8">
       
   <name>Peanutlabs</name>
 	<description>Cordova plugin for Peanutlabs rewards Center</description>
 	<author>Bilguun Oyunchimeg</author>
 	<license>MIT</license>
 	<keywords>peanutlabs,peanut,ads,survey</keywords>
-    <repo>https://github.com/peanut-labs/publisher-cordova-plugin.git</repo>
-    <issue>https://github.com/peanut-labs/publisher-cordova-plugin/issues</issue>
 
 	<engines>
 	    <engine name="cordova" version=">=3.0" />
@@ -30,17 +28,15 @@
       </config-file>
 			
 			<config-file target="AndroidManifest.xml" parent="/manifest/application">
-				<meta-data android:name="com.peanutlabs.sdk.ApplicationId" android:value="@string/peanutlabs_app_id"/>
         <activity android:configChanges="keyboard|keyboardHidden|screenSize|orientation" android:label="@string/title_activity_rewards_center" 						android:name="com.peanutlabs.plsdk.RewardsCenterActivity">
         </activity>
 			</config-file>
-					
-      <source-file src="src/android/PLPluginManager.java" target-dir="src/com/peanutlabs/plugin" />
-			<source-file src="src/android/IRewardsCenterEventsHandler.java" target-dir="src/com/peanutlabs/plugin" />
-			<source-file src="src/android/IToolbarEventsHandler.java" target-dir="src/com/peanutlabs/plugin" />
-			<source-file src="src/android/PeanutLabsManager.java" target-dir="src/com/peanutlabs/plugin" />
-			<source-file src="src/android/RewardsCenterActivity.java" target-dir="src/com/peanutlabs/plugin" />
-			<!-- <source-file src="src/android/plsdk.jar" target-dir="libs/" /> -->
+			
+			<config-file target="AndroidManifest.xml" parent="/*">
+          <uses-permission android:name="android.permission.INTERNET" />
+      </config-file>
+			
+			<source-file src="src/android/plsdk.jar" target-dir="libs/" />
 			
 			<resource-file src="res/drawable-hdpi/ic_action_accept.png" target="res/drawable-hdpi/ic_action_accept.png" />
 			<resource-file src="res/drawable-hdpi/ic_action_cancel.png" target="res/drawable-hdpi/ic_action_cancel.png" />
