@@ -10,6 +10,8 @@
 	<author>Bilguun Oyunchimeg</author>
 	<license>MIT</license>
 	<keywords>peanutlabs,peanut,ads,survey</keywords>
+    <repo>https://github.com/peanut-labs/publisher-cordova-plugin.git</repo>
+    <issue>https://github.com/peanut-labs/publisher-cordova-plugin/issues</issue>
 
 	<engines>
 	    <engine name="cordova" version=">=3.0" />
