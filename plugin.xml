@@ -39,40 +39,5 @@
       </config-file>
 			
 			<framework src="src/android/Peanutlabs" custom="true" />
-			
-			<!-- <source-file src="src/android/PLPluginManager.java" target-dir="src/com/peanutlabs/plugin" />
-			<source-file src="src/android/plsdk.jar" target-dir="libs/" /> -->
-			
-			<!-- <resource-file src="res/drawable-hdpi/ic_action_accept.png" target="res/drawable-hdpi/ic_action_accept.png" />
-			<resource-file src="res/drawable-hdpi/ic_action_cancel.png" target="res/drawable-hdpi/ic_action_cancel.png" />
-			<resource-file src="res/drawable-hdpi/ic_action_next_item.png" target="res/drawable-hdpi/ic_action_next_item.png" />
-			<resource-file src="res/drawable-hdpi/ic_action_previous_item.png" target="res/drawable-hdpi/ic_action_previous_item.png" />
-
-			<resource-file src="res/drawable-mdpi/ic_action_accept.png" target="res/drawable-mdpi/ic_action_accept.png" />
-			<resource-file src="res/drawable-mdpi/ic_action_cancel.png" target="res/drawable-mdpi/ic_action_cancel.png" />
-			<resource-file src="res/drawable-mdpi/ic_action_next_item.png" target="res/drawable-mdpi/ic_action_next_item.png" />
-			<resource-file src="res/drawable-mdpi/ic_action_previous_item.png" target="res/drawable-mdpi/ic_action_previous_item.png" />
-
-			<resource-file src="res/drawable-xhdpi/ic_action_accept.png" target="res/drawable-xhdpi/ic_action_accept.png" />
-			<resource-file src="res/drawable-xhdpi/ic_action_cancel.png" target="res/drawable-xhdpi/ic_action_cancel.png" />
-			<resource-file src="res/drawable-xhdpi/ic_action_next_item.png" target="res/drawable-xhdpi/ic_action_next_item.png" />
-			<resource-file src="res/drawable-xhdpi/ic_action_previous_item.png" target="res/drawable-xhdpi/ic_action_previous_item.png" />
-
-			<resource-file src="res/drawable-xxhdpi/ic_action_accept.png" target="res/drawable-xxhdpi/ic_action_accept.png" />
-			<resource-file src="res/drawable-xxhdpi/ic_action_cancel.png" target="res/drawable-xxhdpi/ic_action_cancel.png" />
-			<resource-file src="res/drawable-xxhdpi/ic_action_next_item.png" target="res/drawable-xxhdpi/ic_action_next_item.png" />
-			<resource-file src="res/drawable-xxhdpi/ic_action_previous_item.png" target="res/drawable-xxhdpi/ic_action_previous_item.png" />
-
-			<resource-file src="res/layout/activity_rewards_center.xml" target="res/layout/activity_rewards_center.xml" />
-
-			<resource-file src="res/values/dimens.xml" target="res/values/dimens.xml" />
-			<resource-file src="res/values/strings.xml" target="res/values/strings.xml" />
-			<resource-file src="res/values/styles.xml" target="res/values/styles.xml" />
-
-			<resource-file src="res/values-v11/styles.xml" target="res/values-v11/styles.xml" />
-
-			<resource-file src="res/values-v14/styles.xml" target="res/values-v14/styles.xml" />
-
-			<resource-file src="res/values-w820dp/dimens.xml" target="res/values-w820dp/dimens.xml" /> -->
    </platform>
 </plugin>
