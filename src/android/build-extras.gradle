@@ -3,6 +3,9 @@
 
 repositories {
     mavenCentral()
+		flatDir{
+      dirs 'lib'
+   }
 }
 
 apply plugin: 'android-library'
@@ -12,7 +15,7 @@ configurations.compile.dependencies.clear()
 
 // add required dependency
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile(name:'plsdk', ext:'jar')
 }
 
 sourceSets {
