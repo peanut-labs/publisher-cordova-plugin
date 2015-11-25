@@ -12,7 +12,7 @@ import com.peanutlabs.plsdk.*;
 
 public class PLPluginManager extends CordovaPlugin {
 	
-	public static final String TAG = "Fucking Apache Cordova";
+	public static final String TAG = "Peanutlabs";
 	
 	@Override
 	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
