@@ -19,10 +19,16 @@ dependencies {
 }
 
 android {
-	sourceSets {
-	        main {
-	            manifest.srcFile 'AndroidManifest.xml'
-	        }
-	    }
+    sourceSets{
+        main{
+           manifest.srcFile 'AndroidManifest.xml'
+           java.srcDirs = ['Peanutlabs/src/com/peanutlabs/publisher']
+           res.srcDirs = ['Peanutlabs/res']
+           jniLibs.srcDirs = ['Peanutlabs/libs']
+           resources.srcDirs = ['Peanutlabs/src']
+           aidl.srcDirs = ['Peanutlabs/src']
+           renderscript.srcDirs = ['Peanutlabs/src']
+           assets.srcDirs = ['Peanutlabs/assets']
+        }
+    }
 }
-
