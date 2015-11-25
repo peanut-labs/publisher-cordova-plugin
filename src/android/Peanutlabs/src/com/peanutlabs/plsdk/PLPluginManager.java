@@ -1,4 +1,4 @@
-package com.peanutlabs.publisher;
+package com.peanutlabs.plsdk;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.*;
