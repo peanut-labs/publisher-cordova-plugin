@@ -15,13 +15,23 @@ configurations.compile.dependencies.clear()
 
 // adding required depencency peanutlabs
 dependencies {
-    compile(name:'plsdk', ext:'jar')
+    compile files('./lib/plsdk.jar')
 }
 
-sourceSets {
-    main {
-        manifest.srcFile 'AndroidManifest.xml'
-        java.srcDirs = ['src']
-        res.srcDirs = ['res']
+android {
+    target = 'android-17'
+    sourceSets {
+        main {
+            manifest {
+                srcFile 'AndroidManifest.xml'
+            }
+            java {
+                srcDir 'src'
+            }
+            res {
+                srcDir 'res'
+            }
+        }
     }
 }
+
