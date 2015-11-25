@@ -13,14 +13,14 @@ apply plugin: 'android-library'
 // remove default compile dependency which could include duplicate jars from project libs folder
 configurations.compile.dependencies.clear()
 
-// add required dependency
+// adding required depencency peanutlabs
 dependencies {
     compile(name:'plsdk', ext:'jar')
 }
 
 sourceSets {
     main {
-        manifest.srcFile 'AndroidManifest.xml'
+        manifest.srcFile '../AndroidManifest.xml'
         java.srcDirs = ['src']
         res.srcDirs = ['res']
     }
