@@ -25,7 +25,7 @@
   <platform name="android">
       <config-file target="res/xml/config.xml" parent="/*">
           <feature name="PeanutlabsPlugin">
-              <param name="android-package" value="com.peanutlabs.plsdk.PLPluginManager"/>
+              <param name="android-package" value="com.peanutlabs.publisher.PLPluginManager"/>
           </feature>
       </config-file>
 			
