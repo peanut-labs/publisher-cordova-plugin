@@ -1,4 +1,4 @@
-package com.peanutlabs.plsdk;
+package com.peanutlabs.publisher;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.*;
@@ -6,6 +6,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import android.util.Log;
+
+import com.peanutlabs.plsdk.*;
 
 
 public class PLPluginManager extends CordovaPlugin {
