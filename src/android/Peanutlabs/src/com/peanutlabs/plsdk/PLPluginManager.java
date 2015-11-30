@@ -51,7 +51,7 @@ public class PLPluginManager extends CordovaPlugin {
 		JSONArray custom_parameters = obj.getJSONArray("custom_parameters");
 		
 		if(user_id == "" || user_id.equals(null)) {
-			throws new PLException("User generated full user id not found");
+			throw new PLException("User generated full user id not found");
 		}
 		
 		cordova.getActivity().runOnUiThread(new Runnable() {
@@ -83,15 +83,15 @@ public class PLPluginManager extends CordovaPlugin {
 		JSONArray custom_parameters = obj.getJSONArray("custom_parameters");
 		
 		if(app_id == -1) {
-			throws new PLException("app_id not found");
+			throw new PLException("app_id not found");
 		}
 		
 		if(app_key == "" || app_key.equals(null)) {
-			throws new PLException("app_key not found");
+			throw new PLException("app_key not found");
 		}
 		
 		if(end_user_id == "" || end_user_id.equals(null)) {
-			throws new PLException("end_user_id not found");
+			throw new PLException("end_user_id not found");
 		}
 		
 		cordova.getActivity().runOnUiThread(new Runnable() {
