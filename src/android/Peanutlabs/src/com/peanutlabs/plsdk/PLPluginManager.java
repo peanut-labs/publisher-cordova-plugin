@@ -45,10 +45,10 @@ public class PLPluginManager extends CordovaPlugin {
 	private void openRewardsCenterWithUserId(JSONArray jarray) {
 		JSONObject obj = jarray.getJSONObject(0);
 		
-		String user_id = obj.getString("user_id");
-		String dob = obj.getString("dob");
-		String gender = obj.getString("gender");
-		JSONArray custom_parameters = obj.getJSONArray("custom_parameters");
+		final String user_id = obj.getString("user_id");
+		final String dob = obj.getString("dob");
+		final String gender = obj.getString("gender");
+		final JSONArray custom_parameters = obj.getJSONArray("custom_parameters");
 		
 		if(user_id == "" || user_id.equals(null)) {
 			throw new PLException("User generated full user id not found");
@@ -75,12 +75,12 @@ public class PLPluginManager extends CordovaPlugin {
 	
 	private void openRewardsCenterWithAppId(JSONArray jarray) {
 		JSONObject obj = jarray.getJSONObject(0);
-		int app_id = obj.getInt("app_id");
-		String app_key = obj.getString("app_key");
-		String end_user_id = obj.getString("end_user_id");
-		String dob = obj.getString("dob");
-		String gender = obj.getString("gender");
-		JSONArray custom_parameters = obj.getJSONArray("custom_parameters");
+		final int app_id = obj.getInt("app_id");
+		final String app_key = obj.getString("app_key");
+		final String end_user_id = obj.getString("end_user_id");
+		final String dob = obj.getString("dob");
+		final String gender = obj.getString("gender");
+		final JSONArray custom_parameters = obj.getJSONArray("custom_parameters");
 		
 		if(app_id == -1) {
 			throw new PLException("app_id not found");
