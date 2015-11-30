@@ -16,5 +16,5 @@ configurations.compile.dependencies.clear()
 // adding required depencency peanutlabs
 dependencies {
     compile files('libs/plsdk.jar')
-		compile 'com.android.support:appcompat-v7:+'
+		compile 'com.android.support:appcompat-v7:19.0.+'
 }
