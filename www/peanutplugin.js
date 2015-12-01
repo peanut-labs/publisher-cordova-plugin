@@ -1,4 +1,4 @@
-cordova.define("PeanutlabsLib.peanutplugin", function(require, exports, module) { var exec = require('cordova/exec');
+var exec = require('cordova/exec');
 
 var PeanutlabsPlugin = {
 	
