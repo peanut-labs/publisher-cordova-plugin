@@ -52,7 +52,7 @@ public class PLPluginManager extends CordovaPlugin {
 		final String gender = obj.getString("gender");
 		final JSONArray custom_parameters = obj.optJSONArray("custom_parameters");
 		
-		if(user_id == "" || user_id.equals(null) || user_id = "null") {
+		if(user_id == "" || user_id.equals(null) || user_id == "null") {
 			throw new PLException("User generated full user id not found");
 		}
 		
