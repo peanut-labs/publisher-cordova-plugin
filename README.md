@@ -27,3 +27,23 @@ cordova plugin add https://github.com/peanut-labs/publisher-cordova-plugin.git
 ```
 cordova plugin remove PeanutlabsLib
 ```
+
+#Open rewards Center
+
+* Include following line in your js file where you want to use our plugin
+```javascript
+<script type="text/javascript" src="plugins/PeanutlabsLib/www/peanutplugin.js"></script>
+```
+
+* Call following methods with appropriate parameters to open rewards center
+```javascript
+PeanutlabsPlugin.openRewardsCenterWithAppId(YOUR_APP_ID, YOUR_APP_KEY, USER_ID, YOUR_DOB, GENDER, CUSTOM_PARAM, success, error);
+
+```
+
+```javascript
+PeanutlabsPlugin.openRewardsCenterWithAppId(YOUR_GENERATED_USER_ID, YOUR_DOB, GENDER, CUSTOM_PARAM, success, error);
+
+```
+
+* See example project included github for more details
