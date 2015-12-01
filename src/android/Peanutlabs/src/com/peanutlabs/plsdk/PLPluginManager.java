@@ -23,7 +23,7 @@ public class PLPluginManager extends CordovaPlugin {
 	}
 	
 	@Override
-	public boolean execute(String action, JSONArray jarray, CallbackContext callbackContext) throws JSONException, PLException {
+	public boolean execute(String action, JSONArray jarray, CallbackContext callbackContext) throws JSONException {
 		Log.v(TAG, action);
 		
 		try {
@@ -42,7 +42,7 @@ public class PLPluginManager extends CordovaPlugin {
 		return true;
 	}
 	
-	private void openRewardsCenterWithUserId(JSONArray jarray) {
+	private void openRewardsCenterWithUserId(JSONArray jarray) throws PLException {
 		JSONObject obj = jarray.getJSONObject(0);
 		
 		final String user_id = obj.getString("user_id");
@@ -73,7 +73,7 @@ public class PLPluginManager extends CordovaPlugin {
 		});
 	}
 	
-	private void openRewardsCenterWithAppId(JSONArray jarray) {
+	private void openRewardsCenterWithAppId(JSONArray jarray) throws PLException {
 		JSONObject obj = jarray.getJSONObject(0);
 		final int app_id = obj.getInt("app_id");
 		final String app_key = obj.getString("app_key");
