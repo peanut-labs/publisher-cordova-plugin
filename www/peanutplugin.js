@@ -1,8 +1,8 @@
-var exec = require('cordova/exec');
+cordova.define("PeanutlabsLib.peanutplugin", function(require, exports, module) { var exec = require('cordova/exec');
 
 var PeanutlabsPlugin = {
 	
-	// custom param will expect following json array
+	// custom param will expect following json array or null
 	// [
 	// 	{key: "param_key_1", value: "param_value_1"},
 	// 	{key: "param_key_2", value: "param_value_2"},
@@ -11,16 +11,16 @@ var PeanutlabsPlugin = {
 		var options = [];
 		
 		options.push({
-			user_id: userId,
-			dob: dob,
-			gender: gender,
-			custom_parameters: custom_param
+			"user_id": userId,
+			"dob": dob,
+			"gender": gender,
+			"custom_parameters": custom_param
 		});
 		
 		cordova.exec(successCallback, failureCallback, 'PeanutlabsPlugin', 'OpenRewardsCenterWithUserId', options);
-	}
+	},
 	
-	// custom param will expect following json array
+	// custom param will expect following json array or null
 	// [
 	// 	{key: "param_key_1", value: "param_value_1"},
 	// 	{key: "param_key_2", value: "param_value_2"},
@@ -29,12 +29,12 @@ var PeanutlabsPlugin = {
 		var options = [];
 		
 		options.push({
-			app_id: appId,
-			app_key: app_key,
-			end_user_id: endUserId,
-			dob: dob,
-			gender: gender,
-			custom_parameters: custom_param
+			"app_id": appId,
+			"app_key": appKey,
+			"end_user_id": endUserId,
+			"dob": dob,
+			"gender": gender,
+			"custom_parameters": custom_param
 		});
 		
 		cordova.exec(successCallback, failureCallback, 'PeanutlabsPlugin', 'OpenRewardsCenterWithAppId', options);
@@ -42,3 +42,4 @@ var PeanutlabsPlugin = {
 };
 
 module.exports = PeanutlabsPlugin;
+});

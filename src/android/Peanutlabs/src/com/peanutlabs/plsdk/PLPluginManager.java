@@ -23,7 +23,7 @@ public class PLPluginManager extends CordovaPlugin {
 	}
 	
 	@Override
-	public boolean execute(String action, JSONArray jarray, CallbackContext callbackContext) throws JSONException {
+	public boolean execute(String action, JSONArray jarray, CallbackContext callbackContext) {
 		Log.v(TAG, action);
 		
 		try {
@@ -37,18 +37,20 @@ public class PLPluginManager extends CordovaPlugin {
 			callbackContext.success();
 		} catch (PLException e) {
 			callbackContext.error(e.getMessage());
+		} catch (JSONException e) {
+			callbackContext.error(e.getMessage());
 		}
 		
 		return true;
 	}
 	
-	private void openRewardsCenterWithUserId(JSONArray jarray) throws PLException {
+	private void openRewardsCenterWithUserId(JSONArray jarray) throws PLException, JSONException {
 		JSONObject obj = jarray.getJSONObject(0);
 		
 		final String user_id = obj.getString("user_id");
 		final String dob = obj.getString("dob");
 		final String gender = obj.getString("gender");
-		final JSONArray custom_parameters = obj.getJSONArray("custom_parameters");
+		final JSONArray custom_parameters = (obj.getJSONArray("custom_parameters") != null) ? obj.getJSONArray("custom_parameters") : new JSONArray();
 		
 		if(user_id == "" || user_id.equals(null)) {
 			throw new PLException("User generated full user id not found");
@@ -57,30 +59,36 @@ public class PLPluginManager extends CordovaPlugin {
 		cordova.getActivity().runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-				PeanutLabsManager pm = PeanutLabsManager.getInstance();
-				pm.setUserId(user_id);
-				pm.setDob(dob);
-				pm.setGender(gender);
+				try {
+					PeanutLabsManager pm = PeanutLabsManager.getInstance();
+					pm.setUserId(user_id);
+					pm.setDob(dob);
+					pm.setGender(gender);
+
+					if(custom_parameters != null) {
+						for (int i = 0; i < custom_parameters.length(); i++) {
+							JSONObject row = custom_parameters.getJSONObject(i);
+
+							pm.addCustomParameters(row.getString("key"), row.getString("value"));
+						}
+					}
 				
-				for (int i = 0; i < custom_parameters.length(); i++) {
-					JSONObject row = custom_parameters.getJSONObject(i);
+					pm.openRewardsCenter(cordova.getActivity());
 					
-					pm.addCustomParameters(row.getString("key"), row.getString("value"));
+				} catch (JSONException e) {
 				}
-				
-				pm.openRewardsCenter(cordova.getActivity());
 			}
 		});
 	}
 	
-	private void openRewardsCenterWithAppId(JSONArray jarray) throws PLException {
+	private void openRewardsCenterWithAppId(JSONArray jarray) throws PLException, JSONException {
 		JSONObject obj = jarray.getJSONObject(0);
 		final int app_id = obj.getInt("app_id");
 		final String app_key = obj.getString("app_key");
 		final String end_user_id = obj.getString("end_user_id");
 		final String dob = obj.getString("dob");
 		final String gender = obj.getString("gender");
-		final JSONArray custom_parameters = obj.getJSONArray("custom_parameters");
+		final JSONArray custom_parameters = obj.optJSONArray("custom_parameters");
 		
 		if(app_id == -1) {
 			throw new PLException("app_id not found");
@@ -97,20 +105,26 @@ public class PLPluginManager extends CordovaPlugin {
 		cordova.getActivity().runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-				PeanutLabsManager pm = PeanutLabsManager.getInstance();
-				pm.setApplicationId(app_id);
-				pm.setApplicationKey(app_key);
-				pm.setEndUserId(end_user_id);
-				pm.setDob(dob);
-				pm.setGender(gender);
-				
-				for (int i = 0; i < custom_parameters.length(); i++) {
-					JSONObject row = custom_parameters.getJSONObject(i);
+				try {
+					PeanutLabsManager pm = PeanutLabsManager.getInstance();
+					pm.setApplicationId(app_id);
+					pm.setApplicationKey(app_key);
+					pm.setEndUserId(end_user_id);
+					pm.setDob(dob);
+					pm.setGender(gender);
+
+					if(custom_parameters != null) {
+						for (int i = 0; i < custom_parameters.length(); i++) {
+							JSONObject row = custom_parameters.getJSONObject(i);
+
+							pm.addCustomParameters(row.getString("key"), row.getString("value"));
+						}
+					}
+
+					pm.openRewardsCenter(cordova.getActivity());
 					
-					pm.addCustomParameters(row.getString("key"), row.getString("value"));
+				} catch (JSONException e) {
 				}
-				
-				pm.openRewardsCenter(cordova.getActivity());
 			}
 		});
 	}
