@@ -42,4 +42,3 @@ var PeanutlabsPlugin = {
 };
 
 module.exports = PeanutlabsPlugin;
-});
