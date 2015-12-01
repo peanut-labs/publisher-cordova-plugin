@@ -2,7 +2,7 @@
 
 Peanut Labs connects your users with thousands of paid online surveys from big brands and market researchers. This SDK allows you to integrate our Reward Center within your Cordova application for Android.
 
-This Marmalade extension only supports Android at the moment, we do plan on supporting iPhone in the near future. If you run into any issues please use Github issues to report.
+This Cordova plugin only supports Android at the moment, we do plan on supporting iPhone in the near future. If you run into any issues please use Github issues to report.
 
 #The Reward Center
 
