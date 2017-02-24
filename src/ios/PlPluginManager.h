@@ -12,5 +12,6 @@
 
 // Exec API
 - (void)openRewardCenterWithUserId:(CDVInvokedUrlCommand*)command;
+- (void)openRewardCenterWithAppId:(CDVInvokedUrlCommand*)command;
 
 @end
