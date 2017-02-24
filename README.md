@@ -42,7 +42,7 @@ PeanutlabsPlugin.openRewardsCenterWithAppId(YOUR_APP_ID, YOUR_APP_KEY, USER_ID, 
 ```
 
 ```javascript
-PeanutlabsPlugin.openRewardsCenterWithAppId(YOUR_GENERATED_USER_ID, YOUR_DOB, GENDER, CUSTOM_PARAM, success, error);
+PeanutlabsPlugin.openRewardsCenterWithUserId(YOUR_GENERATED_USER_ID, YOUR_DOB, GENDER, CUSTOM_PARAM, success, error);
 
 ```
 
