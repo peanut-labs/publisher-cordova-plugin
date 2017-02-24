@@ -17,7 +17,7 @@ var PeanutlabsPlugin = {
 			"custom_parameters": custom_param
 		});
 		
-		cordova.exec(successCallback, failureCallback, 'PeanutlabsPlugin', 'OpenRewardsCenterWithUserId', options);
+		cordova.exec(successCallback, failureCallback, 'PeanutlabsPlugin', 'openRewardsCenterWithUserId', options);
 	},
 	
 	// custom param will expect following json array or null
@@ -37,7 +37,7 @@ var PeanutlabsPlugin = {
 			"custom_parameters": custom_param
 		});
 		
-		cordova.exec(successCallback, failureCallback, 'PeanutlabsPlugin', 'OpenRewardsCenterWithAppId', options);
+		cordova.exec(successCallback, failureCallback, 'PeanutlabsPlugin', 'openRewardsCenterWithAppId', options);
 	}
 };
 

@@ -10,7 +10,7 @@
 
 @implementation PlPluginManager
 
-- (void)openRewardCenterWithUserId:(CDVInvokedUrlCommand*)command {
+- (void)openRewardsCenterWithUserId:(CDVInvokedUrlCommand*)command {
     PeanutLabsManager *plManager = [PeanutLabsManager getInstance];
     NSDictionary* data = [command.arguments objectAtIndex:0];
 
@@ -43,7 +43,7 @@
     [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] callbackId:command.callbackId];
 }
 
-- (void)openRewardCenterWithAppId:(CDVInvokedUrlCommand*)command {
+- (void)openRewardsCenterWithAppId:(CDVInvokedUrlCommand*)command {
     PeanutLabsManager *plManager = [PeanutLabsManager getInstance];
     NSDictionary* data = [command.arguments objectAtIndex:0];
 

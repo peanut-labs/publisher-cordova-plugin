@@ -11,7 +11,7 @@
 @interface PlPluginManager : CDVPlugin
 
 // Exec API
-- (void)openRewardCenterWithUserId:(CDVInvokedUrlCommand*)command;
-- (void)openRewardCenterWithAppId:(CDVInvokedUrlCommand*)command;
+- (void)openRewardsCenterWithUserId:(CDVInvokedUrlCommand*)command;
+- (void)openRewardsCenterWithAppId:(CDVInvokedUrlCommand*)command;
 
 @end
