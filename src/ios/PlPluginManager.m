@@ -6,10 +6,17 @@
 //
 
 #import "PlPluginManager.h"
+#import "PeanutLabsManager.h"
 
 @implementation PlPluginManager
 
 - (void)openRewardCenterWithUserId:(CDVInvokedUrlCommand*)command {
+  PeanutLabsManager *plManager = [PeanutLabsManager getInstance];
+
+  NSString* userId = [command.arguments objectAtIndex:0];
+  NSString* dob = [command.arguments objectAtIndex:1];
+  [plManager setUserId:userId];
+  [plManager openRewardsCenter];
 }
 
 @end
