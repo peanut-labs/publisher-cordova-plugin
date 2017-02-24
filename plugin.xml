@@ -48,7 +48,9 @@
         <param name="ios-package" value="PlPluginManager"/>
       </feature>
     </config-file>
-    
+
+    <header-file src="src/ios/PlPluginManager.h" />
+    <source-file src="src/ios/PlPluginManager.m" />
     <header-file src="src/ios/PeanutLabsManager.h" />
     <source-file src="src/ios/PeanutLabsManager.m" />
     <header-file src="src/ios/PlRewardsCenterView.h" />
