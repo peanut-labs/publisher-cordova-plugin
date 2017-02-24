@@ -14,7 +14,7 @@ All of this and much more is configured and monitored through our Publisher Dash
 
 #Integration
 
-Check out <a href="http://peanut-labs.github.io/publisher-doc/" target="_blank">our integration guide</a> for step by step instructions on getting up and running with our Reward Center within your Android application.
+Check out <a href="http://peanut-labs.github.io/publisher-doc/" target="_blank">our integration guide</a> for step by step instructions on getting up and running with our Reward Center within your application.
 
 #Cordova Usage
 
