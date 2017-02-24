@@ -44,7 +44,7 @@
   <!-- ios -->
   <platform name="ios">
     <config-file target="config.xml" parent="/*">
-      <feature name="PeanutLabs">
+      <feature name="PeanutLabsPlugin">
         <param name="ios-package" value="PlPluginManager"/>
       </feature>
     </config-file>
