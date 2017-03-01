@@ -1,8 +1,8 @@
 # publisher-cordova-plugin
 
-Peanut Labs connects your users with thousands of paid online surveys from big brands and market researchers. This SDK allows you to integrate our Reward Center within your Cordova application for Android.
+Peanut Labs connects your users with thousands of paid online surveys from big brands and market researchers. This SDK allows you to integrate our Reward Center within your Cordova application for iOS and Android.
 
-This Cordova plugin only supports Android at the moment, we do plan on supporting iPhone in the near future. If you run into any issues please use Github issues to report.
+If you run into any issues please use Github issues to report.
 
 #The Reward Center
 
@@ -14,7 +14,7 @@ All of this and much more is configured and monitored through our Publisher Dash
 
 #Integration
 
-Check out <a href="http://peanut-labs.github.io/publisher-doc/" target="_blank">our integration guide</a> for step by step instructions on getting up and running with our Reward Center within your Android application.
+Check out <a href="http://peanut-labs.github.io/publisher-doc/" target="_blank">our integration guide</a> for step by step instructions on getting up and running with our Reward Center within your application.
 
 #Cordova Usage
 
@@ -42,7 +42,7 @@ PeanutlabsPlugin.openRewardsCenterWithAppId(YOUR_APP_ID, YOUR_APP_KEY, USER_ID, 
 ```
 
 ```javascript
-PeanutlabsPlugin.openRewardsCenterWithAppId(YOUR_GENERATED_USER_ID, YOUR_DOB, GENDER, CUSTOM_PARAM, success, error);
+PeanutlabsPlugin.openRewardsCenterWithUserId(YOUR_GENERATED_USER_ID, YOUR_DOB, GENDER, CUSTOM_PARAM, success, error);
 
 ```
 

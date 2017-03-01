@@ -13,8 +13,8 @@ import com.peanutlabs.plsdk.*;
 public class PLPluginManager extends CordovaPlugin {
 	
 	public static final String TAG = "Peanutlabs";
-	public static final String ACTION_OPEN_WITH_USERID = "OpenRewardsCenterWithUserId";
-	public static final String ACTION_OPEN_WITH_APPID = "OpenRewardsCenterWithAppId";
+	public static final String ACTION_OPEN_WITH_USERID = "openRewardsCenterWithUserId";
+	public static final String ACTION_OPEN_WITH_APPID = "openRewardsCenterWithAppId";
 	
 	@Override
 	public void initialize(CordovaInterface cordova, CordovaWebView webView) {

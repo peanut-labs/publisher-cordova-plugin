@@ -1,43 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	id="PeanutlabsLib"
-	version="0.0.8">
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="PeanutlabsLib"
+  version="0.0.8">
       
   <name>Peanutlabs</name>
-	<description>Cordova plugin for Peanutlabs rewards Center</description>
-	<author>Bilguun Oyunchimeg</author>
-	<license>MIT</license>
-	<keywords>peanutlabs,peanut,ads,survey</keywords>
-    <repo>https://github.com/peanut-labs/publisher-cordova-plugin.git</repo>
-    <issue>https://github.com/peanut-labs/publisher-cordova-plugin/issues</issue>
+  <description>Cordova plugin for Peanutlabs rewards Center</description>
+  <author>Bilguun Oyunchimeg</author>
+  <license>MIT</license>
+  <keywords>peanutlabs,peanut,ads,survey</keywords>
+  <repo>https://github.com/peanut-labs/publisher-cordova-plugin.git</repo>
+  <issue>https://github.com/peanut-labs/publisher-cordova-plugin/issues</issue>
 
-	<engines>
-	    <engine name="cordova" version=">=3.0" />
-	</engines>
+  <engines>
+    <engine name="cordova" version=">=3.0" />
+  </engines>
 
   <js-module src="www/peanutplugin.js" name="peanutplugin">
-      <clobbers target="PeanutlabsPlugin" />
+    <clobbers target="PeanutlabsPlugin" />
   </js-module>
 
-    <!-- android -->
+  <!-- android -->
   <platform name="android">
-      <config-file target="res/xml/config.xml" parent="/*">
-          <feature name="PeanutlabsPlugin">
-              <param name="android-package" value="com.peanutlabs.plsdk.PLPluginManager"/>
-          </feature>
-      </config-file>
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="PeanutlabsPlugin">
+        <param name="android-package" value="com.peanutlabs.plsdk.PLPluginManager"/>
+      </feature>
+    </config-file>
 			
-			<config-file target="AndroidManifest.xml" parent="/manifest/application">
-        <activity android:configChanges="keyboard|keyboardHidden|screenSize|orientation" android:label="@string/title_activity_rewards_center" 						android:name="com.peanutlabs.plsdk.RewardsCenterActivity">
-        </activity>
-			</config-file>
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+      <activity android:configChanges="keyboard|keyboardHidden|screenSize|orientation" android:label="@string/title_activity_rewards_center" 						android:name="com.peanutlabs.plsdk.RewardsCenterActivity">
+      </activity>
+    </config-file>
 			
-			<config-file target="AndroidManifest.xml" parent="/*">
-          <uses-permission android:name="android.permission.INTERNET" />
-      </config-file>
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.INTERNET" />
+    </config-file>
 			
-			<framework src="src/android/Peanutlabs" custom="true" />
-   </platform>
+    <framework src="src/android/Peanutlabs" custom="true" />
+  </platform>
+
+  <!-- ios -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="PeanutLabsPlugin">
+        <param name="ios-package" value="PlPluginManager"/>
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/PlPluginManager.h" />
+    <source-file src="src/ios/PlPluginManager.m" />
+    <header-file src="src/ios/PeanutLabsManager.h" />
+    <source-file src="src/ios/PeanutLabsManager.m" />
+    <header-file src="src/ios/PlRewardsCenterView.h" />
+    <source-file src="src/ios/PlRewardsCenterView.m" />
+    <header-file src="src/ios/PlRewardsCenterViewController.h" />
+    <source-file src="src/ios/PlRewardsCenterViewController.m" />
+    <header-file src="src/ios/PlUtils.h" />
+    <source-file src="src/ios/PlUtils.m" />
+  </platform>
 </plugin>
